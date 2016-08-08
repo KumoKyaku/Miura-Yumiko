@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>输出日志</Title>
+
+      <Author>Kumo</Author>
+
+      <Description>Debug输出运行信息到控制台和指定位置</Description>
+
+      <Shortcut>LOG</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        #if UNITY_EDITOR || Development
+                Debuger.Log("");
+        #endif]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

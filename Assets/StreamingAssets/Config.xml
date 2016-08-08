@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<CFG>
+	<PATH>path</PATH>
+	<test>suntong</test>
+	<FPS>60</FPS>
+	<SpritePath>Pictures/BG/</SpritePath>
+	<UIPath>UI/</UIPath>
+	<AudioClipPath>Sound/</AudioClipPath>
+	<AutoGap>5</AutoGap>
+	<FirstNode>1</FirstNode>
+	<FirstScene>1</FirstScene>
+	<ActorPath>Actor/</ActorPath>
+	<MaxCountPerPage>80</MaxCountPerPage>
+	<PreparePath>Prepare/</PreparePath>
+</CFG>

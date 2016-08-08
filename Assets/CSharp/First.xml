@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2011 rel. 2 sp1 (lstking) 使用XMLSpy vlstcom编辑的 (http://www.altova.com) by -->
+<Scene ID="1" Begin="1" LastScene="" NextScene="">
+	<Dialogue ID="1" Last="0" Next="2">
+		<Effect Name="test"/>
+		<Effect Name="test"/>
+		<Acting/>
+		<Acting/>
+		<Acting ID="1" Name=" "/>
+	</Dialogue>
+	<Dialogue ID="2" Last="1" Next="3">
+		<Effect/>
+		<Effect/>
+	</Dialogue>
+	<Dialogue ID="3" Last="2" Next="0"/>
+	<Dialogue/>
+	<config>
+		<time>1</time>
+		<count>3</count>
+    <PATH>"so"</PATH>
+	</config>
+</Scene>

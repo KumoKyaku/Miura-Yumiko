@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被2012 () 使用XMLSpy v编辑的 (http://www.altova.com) by -->
+<Libretto>
+	<Scene ID="1" Name="First" BGImage="BG (1)" BGAudio="Au1">
+		<!--public enum SentenceType {说出声的Spoken = 0,心理活动Psychic = 1,旁白Aside = 2,选择文本Option = 3,只有背景图模式AllIn = 4,}
+public enum NodeType{句子Sentence = 0,分支Brunch = 1,选项Option = 2,/// 结局End = 3,}
+public enum Mood{Default = 0,Happy = 1,Cry = 2,Angry = 3,}-->
+		<Node ID="-2" NodeType="Option" Next="-1">
+			<Sentence Result="1" ID="200002" SentenceType="Option" SpeakerID="11"/>
+			<Sentence Result="2" ID="200003" SentenceType="Option" SpeakerID="11"/>
+			<Sentence Result="4" ID="200004" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="-1" NodeType="Brunch" Next="-2" ChangeBGImage="Scene" ChangeBGM="Scene">
+			<Brunch SubID="1" Next="7"/>
+			<Brunch SubID="2" Next="6"/>
+			<Brunch SubID="4" Next="8"/>
+		</Node>
+		<Node ID="0" NodeType="Sentence" Next="1" ChangeBGM="Sd(1)">
+			<Sentence ID="100100" SentenceType="Spoken" SpeakerID="11"/>
+			<Actor ID="100101" Mood="Happy" x="0.5"/>
+			<Actor ID="100109" Mood="Happy" x="0.75"/>
+			<Actor ID="100102" Mood="Happy" x="0.25"/>
+		</Node>
+		<Node ID="1" NodeType="Sentence" Next="20">
+			<Sentence ID="200009" SubID="0" SentenceType="Aside" SpeakerID="100101"/>
+		</Node>
+		<Node ID="20" NodeType="Sentence" Next="30">
+			<Sentence ID="200010" SubID="0" SentenceType="Aside" SpeakerID="100101"/>
+		</Node>
+	</Scene>
+	<Scene ID="2" Name="2" BGImage="BG (2)" BGAudio="Au1">
+		<Node ID="30" NodeType="Sentence" Next="40" ChangeBGImage="BG (2)">
+			<Sentence ID="200011" SubID="0" SentenceType="Aside" SpeakerID="100101"/>
+		</Node>
+		<Node ID="40" NodeType="Sentence" Next="50">
+			<Sentence ID="200012" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200013" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100107" Mood="Happy" x="0.5"/>
+		</Node>
+		<Node ID="50" NodeType="Sentence" Next="60">
+			<Sentence ID="200014" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200015" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="60" NodeType="Sentence" Next="70">
+			<Sentence ID="200016" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="70" NodeType="Sentence" Next="80">
+			<Sentence ID="200017" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="80" NodeType="Sentence" Next="90">
+			<Sentence ID="200018" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200019" SubID="1" SentenceType="Psychic" SpeakerID="100110"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="90" NodeType="Sentence" Next="100">
+			<Sentence ID="200020" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200021" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="100" NodeType="Sentence" Next="110">
+			<Sentence ID="200022" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200023" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200024" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="110" NodeType="Sentence" Next="120">
+			<Sentence ID="200025" SubID="0" SentenceType="Spoken" SpeakerID="100107">
+				<Effect Name="eff2" Owner="100107" Life="1" Size="2" Pos="2"/>
+			</Sentence>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="120" NodeType="Sentence" Next="130">
+			<Sentence ID="200026" SubID="0" SentenceType="Psychic" SpeakerID="100110"/>
+			<Sentence ID="200027" SubID="1" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+	</Scene>
+	<Scene ID="3" Name="3" BGImage="BG (3)" BGAudio="Au1">
+		<Node ID="130" NodeType="Sentence" Next="140" ChangeBGImage="BG (3)">
+			<Sentence ID="200028" SubID="0" SentenceType="Spoken" SpeakerID="100111"/>
+			<Sentence ID="200029" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+			<Actor ID="100111" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="140" NodeType="Sentence" Next="150">
+			<Sentence ID="200031" SubID="0" SentenceType="Spoken" SpeakerID="100111"/>
+			<Sentence ID="200032" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200033" SubID="2" SentenceType="Spoken" SpeakerID="100111"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+			<Actor ID="100111" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="150" NodeType="Option" Next="160">
+			<Sentence SubID="1" ID="200034" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="2" ID="200035" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="160" NodeType="Brunch" Next="150" ChangeBGImage="Scene">
+			<Brunch SubID="1" Next="170"/>
+			<Brunch SubID="2" Next="175"/>
+		</Node>
+		<Node ID="170" NodeType="Sentence" Next="180">
+			<Sentence ID="200036" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="175" NodeType="Sentence" Next="150">
+			<Sentence ID="210036" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="4" Name="4" BGImage="BG (4)" BGAudio="Au1">
+		<Node ID="180" NodeType="Sentence" Next="190" ChangeBGImage="BG (4)">
+			<Sentence ID="200037" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200038" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200039" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200040" SubID="3" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200041" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200042" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200043" SubID="6" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="190" NodeType="Sentence" Next="200">
+			<Sentence ID="200044" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200045" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200046" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200047" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200048" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200049" SubID="5" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200050" SubID="6" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="200" NodeType="Sentence" Next="210">
+			<Sentence ID="200051" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200052" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="5" Name="5" BGImage="BG (5)" BGAudio="Au1">
+		<Node ID="210" NodeType="Sentence" Next="220" ChangeBGImage="BG (5)">
+			<Sentence ID="200053" SubID="0" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200054" SubID="1" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200055" SubID="2" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200056" SubID="3" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200057" SubID="4" SentenceType="Psychic" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.5"/>
+		</Node>
+		<Node ID="220" NodeType="Sentence" Next="231">
+			<Sentence ID="200058" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200059" SubID="1" SentenceType="Spoken" SpeakerID="100100"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="231" NodeType="Sentence" Next="241">
+			<Sentence ID="200060" SubID="0" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200061" SubID="1" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200062" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200063" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200064" SubID="4" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200065" SubID="5" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200066" SubID="6" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200067" SubID="7" SentenceType="Spoken" SpeakerID="100112"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="241" NodeType="Sentence" Next="251">
+			<Sentence ID="200068" SubID="0" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200069" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200070" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200071" SubID="3" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200072" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200073" SubID="5" SentenceType="Psychic" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="251" NodeType="Sentence" Next="261">
+			<Sentence ID="200074" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200075" SubID="1" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200076" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200077" SubID="3" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+			<Actor ID="100110" Mood="Happy" x="0.95"/>
+		</Node>
+		<Node ID="261" NodeType="Sentence" Next="271">
+			<Sentence ID="200078" SubID="0" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200079" SubID="1" SentenceType="Psychic" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="271" NodeType="Option" Next="281">
+			<Sentence SubID="1" ID="200080" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="2" ID="200081" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="281" NodeType="Brunch" Next="271" ChangeBGImage="Scene">
+			<Brunch SubID="1" Next="295"/>
+			<Brunch SubID="2" Next="291"/>
+		</Node>
+		<Node ID="291" NodeType="Sentence" Next="311">
+			<Sentence ID="200082" SubID="0" SentenceType="Psychic" SpeakerID="100101"/>
+			<Sentence ID="200083" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200084" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200085" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200086" SubID="4" SentenceType="Spoken" SpeakerID="100112"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="295" NodeType="End">
+			<Sentence ID="210082" SubID="0" SentenceType="Spoken" SpeakerID="100100"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="311" NodeType="Sentence" Next="321">
+			<Sentence ID="200087" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200088" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="321" NodeType="Sentence" Next="331">
+			<Sentence ID="200089" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200090" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200091" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200092" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200093" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200094" SubID="5" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200095" SubID="6" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200096" SubID="7" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200097" SubID="8" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200098" SubID="9" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100110" Mood="Happy" x="0.45"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="331" NodeType="Sentence" Next="341">
+			<Sentence ID="200099" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200100" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200101" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200102" SubID="3" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100110" Mood="Happy" x="0.45"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="341" NodeType="Sentence" Next="351">
+			<Sentence ID="200103" SubID="0" SentenceType="Spoken" SpeakerID="100102"/>
+		</Node>
+	</Scene>
+	<Scene ID="6" Name="6" BGImage="BG (6)" BGAudio="Au1">
+		<Node ID="351" NodeType="Sentence" Next="361" ChangeBGImage="BG (6)">
+			<Sentence ID="800104" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200104" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="361" NodeType="Sentence" Next="371">
+			<Sentence ID="200105" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100110" Mood="Happy" x="0.95"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="371" NodeType="Sentence" Next="381">
+			<Sentence ID="200106" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200107" SubID="1" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200108" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200109" SubID="3" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200110" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="381" NodeType="Sentence" Next="391">
+			<Sentence ID="200111" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200112" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200113" SubID="2" SentenceType="Psychic" SpeakerID="100108"/>
+			<Sentence ID="800113" SubID="3" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200114" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200115" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="391" NodeType="Sentence" Next="401">
+			<Sentence ID="200116" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200117" SubID="1" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200118" SubID="2" SentenceType="Spoken" SpeakerID="100108"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="401" NodeType="Option" Next="411">
+			<Sentence SubID="1" ID="200119" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="2" ID="200120" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="4" ID="200121" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="411" NodeType="Brunch" Next="401" ChangeBGImage="Scene">
+			<Brunch SubID="1" Next="425"/>
+			<Brunch SubID="2" Next="421"/>
+			<Brunch SubID="4" Next="425"/>
+		</Node>
+		<Node ID="421" NodeType="Sentence" Next="431">
+			<Sentence ID="200122" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+			<Sentence ID="200123" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200124" SubID="2" SentenceType="Spoken" SpeakerID="100108"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="425" NodeType="Sentence" Next="391">
+			<Sentence ID="210122" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100108" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="7" Name="7" BGImage="BG (7)" BGAudio="Au1">
+		<Node ID="431" NodeType="Sentence" Next="441" ChangeBGImage="BG (7)">
+			<Sentence ID="200125" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100110" Mood="Happy" x="0.95"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="441" NodeType="Sentence" Next="451">
+			<Sentence ID="200126" SubID="0" SentenceType="Spoken" SpeakerID="100113"/>
+			<Sentence ID="200127" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200128" SubID="2" SentenceType="Spoken" SpeakerID="100113"/>
+			<Sentence ID="200129" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200130" SubID="4" SentenceType="Spoken" SpeakerID="100113"/>
+			<Sentence ID="200131" SubID="5" SentenceType="Psychic" SpeakerID="100113"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100113" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="8" Name="8" BGImage="BG (8)" BGAudio="Au1">
+		<Node ID="451" NodeType="Sentence" Next="461" ChangeBGImage="BG (8)">
+			<Sentence ID="200132" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="461" NodeType="Sentence" Next="471">
+			<Sentence ID="200133" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200134" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200135" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200136" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200137" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200138" SubID="5" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200139" SubID="6" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200140" SubID="7" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200141" SubID="8" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200142" SubID="9" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200143" SubID="10" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200144" SubID="11" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200145" SubID="12" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="9" Name="9" BGImage="BG (9)" BGAudio="Au1">
+		<Node ID="471" NodeType="Sentence" Next="481" ChangeBGImage="BG (9)">
+			<Sentence ID="200146" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200147" SubID="1" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200148" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100110" Mood="Happy" x="0.35"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="481" NodeType="Sentence" Next="490">
+			<Sentence ID="200149" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+		</Node>
+		<Node ID="490" NodeType="Sentence" Next="500">
+			<Sentence ID="200150" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200151" SubID="1" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200152" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100103" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="500" NodeType="Sentence" Next="511" ChangeBGImage="AllIn (1)">
+			<Sentence ID="200153" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200154" SubID="1" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200155" SubID="2" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200156" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200157" SubID="4" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+	</Scene>
+	<Scene ID="10" Name="10" BGImage="BG (10)" BGAudio="Au1">
+		<Node ID="511" NodeType="Sentence" Next="521" ChangeBGImage="AllIn (2)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="521" NodeType="Sentence" Next="531" ChangeBGImage="AllIn (3)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="531" NodeType="Sentence" Next="541" ChangeBGImage="AllIn (4)">
+			<Sentence ID="200158" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+		<Node ID="541" NodeType="Sentence" Next="551" ChangeBGImage="AllIn (5)">
+			<Sentence ID="200159" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200160" SubID="1" SentenceType="Psychic" SpeakerID="100103"/>
+		</Node>
+		<Node ID="551" NodeType="Sentence" Next="561" ChangeBGImage="AllIn (6)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="561" NodeType="Sentence" Next="571" ChangeBGImage="AllIn (7)">
+			<Sentence ID="200161" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+		<Node ID="571" NodeType="Sentence" Next="581" ChangeBGImage="AllIn (8)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="581" NodeType="Sentence" Next="591" ChangeBGImage="AllIn (9)">
+			<Sentence ID="200162" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+		<Node ID="591" NodeType="Sentence" Next="600" ChangeBGImage="AllIn (10)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="600" NodeType="Sentence" Next="611" ChangeBGImage="AllIn (12)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="611" NodeType="Sentence" Next="621" ChangeBGImage="AllIn (13)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="621" NodeType="Sentence" Next="631" ChangeBGImage="AllIn (11)">
+			<Sentence ID="200163" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+		<Node ID="631" NodeType="Sentence" Next="632" ChangeBGImage="AllIn (1)">
+			<Sentence ID="200164" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200165" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200166" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200167" SubID="3" SentenceType="Spoken" SpeakerID="100103"/>
+		</Node>
+		<Node ID="632" NodeType="Sentence" Next="641" ChangeBGImage="AllIn (14)">
+			<Sentence ID="200168" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+		</Node>
+		<Node ID="641" NodeType="Option" Next="651">
+			<Sentence SubID="1" ID="200169" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="2" ID="200170" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="651" NodeType="Brunch" Next="641" ChangeBGImage="Scene">
+			<Brunch SubID="1" Next="661"/>
+			<Brunch SubID="2" Next="665"/>
+		</Node>
+		<Node ID="661" NodeType="Sentence" Next="671" ChangeBGImage="AllIn (14)">
+			<Sentence ID="200171" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="665" NodeType="End" ChangeBGImage="AllIn (14)">
+			<Sentence ID="210170" SubID="0" SentenceType="Spoken" SpeakerID="100100"/>
+		</Node>
+		<Node ID="671" NodeType="Sentence" Next="681" ChangeBGImage="AllIn (15)">
+			<Sentence ID="800170" SubID="0" SentenceType="Spoken" SpeakerID="100106"/>
+		</Node>
+		<Node ID="681" NodeType="Sentence" Next="691" ChangeBGImage="AllIn (16)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="691" NodeType="Sentence" Next="700" ChangeBGImage="AllIn (17)">
+			<Sentence ID="200172" SubID="0" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200173" SubID="1" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200174" SubID="2" SentenceType="Spoken" SpeakerID="100102"/>
+		</Node>
+		<Node ID="700" NodeType="Sentence" Next="721" ChangeBGImage="BF (1)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="721" NodeType="Sentence" Next="731" ChangeBGImage="BF (2)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="731" NodeType="Sentence" Next="732" ChangeBGImage="BF (6)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101">
+				<Effect Name="eff3" Owner="100100" Life="1" Size="1" Pos="5"/>
+			</Sentence>
+		</Node>
+		<Node ID="732" NodeType="Sentence" Next="741" ChangeBGImage="BF (3)">
+			<Sentence ID="200176" SubID="0" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200177" SubID="1" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200178" SubID="2" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200179" SubID="3" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200180" SubID="4" SentenceType="Spoken" SpeakerID="100102"/>
+		</Node>
+		<Node ID="741" NodeType="Sentence" Next="751" ChangeBGImage="BF (4)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="751" NodeType="Sentence" Next="761" ChangeBGImage="BF (5)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="761" NodeType="Sentence" Next="771" ChangeBGImage="AllIn (18)">
+			<Sentence ID="200181" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200182" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200183" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="771" NodeType="Sentence" Next="781" ChangeBGImage="AllIn (19)">
+			<Sentence ID="200184" SubID="0" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff4" Owner="100100" Life="1" Size="1" Pos="0"/>
+			</Sentence>
+		</Node>
+		<Node ID="781" NodeType="Sentence" Next="791" ChangeBGImage="AllIn (20)">
+			<Sentence ID="200000" SubID="0" SentenceType="AllIn" SpeakerID="100101"/>
+		</Node>
+		<Node ID="791" NodeType="Sentence" Next="800" ChangeBGImage="AllIn (21)">
+			<Sentence ID="200185" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200186" SubID="1" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200187" SubID="2" SentenceType="Spoken" SpeakerID="100102"/>
+			<Sentence ID="200188" SubID="3" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200189" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="800" NodeType="Sentence" Next="810" ChangeBGImage="AllIn (22)">
+			<Sentence ID="200190" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200191" SubID="1" SentenceType="Spoken" SpeakerID="100103"/>
+			<Sentence ID="200192" SubID="2" SentenceType="Spoken" SpeakerID="100103"/>
+		</Node>
+		<Node ID="810" NodeType="Sentence" Next="821" ChangeBGImage="AllIn (23)">
+			<Sentence ID="200193" SubID="3" SentenceType="Spoken" SpeakerID="100103">
+				<Effect Name="eff5" Owner="100100" Life="1" Size="1" Pos="6"/>
+			</Sentence>
+		</Node>
+		<Node ID="821" NodeType="Sentence" Next="831" ChangeBGImage="AllIn (18)">
+			<Sentence ID="200194" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="831" NodeType="Sentence" Next="841" ChangeBGImage="AllIn (24)">
+			<Sentence ID="200195" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200196" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200197" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="841" NodeType="Sentence" Next="851" ChangeBGImage="AllIn (25)">
+			<Sentence ID="200198" SubID="0" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff1" Owner="100100" Life="2" Size="1" Pos="7"/>
+			</Sentence>
+			<Sentence ID="200199" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="851" NodeType="Sentence" Next="861" ChangeBGImage="AllIn (1)">
+			<Sentence ID="200200" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+		</Node>
+		<Node ID="861" NodeType="Sentence" Next="871" ChangeBGImage="AllIn (26)">
+			<Sentence ID="200201" SubID="0" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff6" Owner="100100" Life="1" Size="1" Pos="5"/>
+			</Sentence>
+		</Node>
+		<Node ID="871" NodeType="Sentence" Next="881" ChangeBGImage="AllIn (27)">
+			<Sentence ID="200202" SubID="0" SentenceType="Spoken" SpeakerID="100108"/>
+		</Node>
+		<Node ID="881" NodeType="Sentence" Next="900" ChangeBGImage="AllIn (5)">
+			<Sentence ID="200203" SubID="0" SentenceType="Spoken" SpeakerID="100103"/>
+		</Node>
+	</Scene>
+	<Scene ID="11" Name="11" BGImage="BG (11)" BGAudio="Au1">
+		<Node ID="900" NodeType="Sentence" Next="910" ChangeBGImage="BG (11)">
+			<Sentence ID="200204" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200205" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200206" SubID="2" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200207" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+	<Scene ID="12" Name="12" BGImage="BG (2)" BGAudio="Au1">
+		<Node ID="910" NodeType="Sentence" Next="920" ChangeBGImage="BG (2)">
+			<Sentence ID="200208" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200209" SubID="1" SentenceType="Spoken" SpeakerID="100109"/>
+			<Sentence ID="200210" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200211" SubID="3" SentenceType="Spoken" SpeakerID="100109"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.85"/>
+			<Actor ID="100109" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="920" NodeType="Sentence" Next="930">
+			<Sentence ID="200212" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200213" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.85"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="930" NodeType="Option" Next="940">
+			<Sentence SubID="1" ID="200214" SentenceType="Option" SpeakerID="11"/>
+			<Sentence SubID="2" ID="200215" SentenceType="Option" SpeakerID="11"/>
+		</Node>
+		<Node ID="940" NodeType="Brunch" Next="930" ChangeBGImage="Scene">
+			<Brunch SubID="1" Next="950"/>
+			<Brunch SubID="2" Next="955"/>
+		</Node>
+		<Node ID="950" NodeType="Sentence" Next="960">
+			<Sentence ID="200216" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200217" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200218" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200219" SubID="3" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.8"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="955" NodeType="End">
+			<Sentence ID="210216" SubID="0" SentenceType="Spoken" SpeakerID="100100"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100110" Mood="Happy" x="0.8"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="960" NodeType="Sentence" Next="970">
+			<Sentence ID="200220" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200241" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200242" SubID="2" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200243" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200244" SubID="4" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200245" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100107" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="970" NodeType="Sentence" Next="980">
+			<Sentence ID="200246" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200247" SubID="1" SentenceType="Spoken" SpeakerID="100107">
+				<Effect Name="eff21" Owner="100107" Life="1" Size="2" Pos="5"/>
+			</Sentence>
+			<Sentence ID="800247" SubID="2" SentenceType="Spoken" SpeakerID="100107">
+				<Effect Name="eff21" Owner="100101" Life="4" Size="1" Pos="5"/>
+				<Effect Name="eff21" Owner="100101" Life="4" Size="1" Pos="4"/>
+			</Sentence>
+			<Sentence ID="200248" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200249" SubID="4" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff8" Owner="100101" Life="2" Size="1" Pos="5"/>
+				<Effect Name="eff8" Owner="100101" Life="2" Size="1" Pos="4"/>
+			</Sentence>
+			<Sentence ID="200250" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="980" NodeType="Sentence" Next="990">
+			<Sentence ID="200221" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200222" SubID="1" SentenceType="Spoken" SpeakerID="100107">
+				<Effect Name="eff1" Owner="100101" Life="13" Size="2" Pos="3"/>
+			</Sentence>
+			<Sentence ID="200223" SubID="2" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200224" SubID="3" SentenceType="Spoken" SpeakerID="100107">
+				<Effect Name="eff40" Owner="100101" Life="8" Size="3" Pos="3"/>
+			</Sentence>
+			<Sentence ID="200225" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200226" SubID="5" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200227" SubID="6" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200226" SubID="7" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200228" SubID="8" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200226" SubID="9" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200229" SubID="10" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200230" SubID="11" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200231" SubID="12" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200232" SubID="13" SentenceType="Spoken" SpeakerID="100101"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="990" NodeType="Sentence" Next="1000">
+			<Sentence ID="200233" SubID="0" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200234" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200235" SubID="2" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+	</Scene>
+	<Scene ID="13" Name="13" BGImage="BG (13)" BGAudio="Au1">
+		<Node ID="1000" NodeType="Sentence" Next="1111" ChangeBGImage="BG (13)">
+			<Sentence ID="200236" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200237" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200238" SubID="2" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff50" Owner="100101" Life="1" Size="1.5" Pos="1"/>
+			</Sentence>
+			<Sentence ID="200239" SubID="3" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="1111" NodeType="Sentence" Next="1121" ChangeBGImage="BG (13)">
+			<Sentence ID="200251" SubID="0" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200252" SubID="1" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200253" SubID="2" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200254" SubID="3" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200255" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200256" SubID="5" SentenceType="Spoken" SpeakerID="100107"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="1121" NodeType="Sentence" Next="1131" ChangeBGImage="BG (13)">
+			<Sentence ID="200257" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200258" SubID="1" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200259" SubID="2" SentenceType="Spoken" SpeakerID="100100"/>
+			<Sentence ID="200260" SubID="3" SentenceType="Spoken" SpeakerID="100101">
+				<Effect Name="eff48" Owner="100107" Life="20" Size="0.3" Pos="1"/>
+				<Effect Name="eff48" Owner="100112" Life="20" Size="0.3" Pos="1"/>
+			</Sentence>
+			<Sentence ID="200261" SubID="4" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200262" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200263" SubID="6" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200264" SubID="7" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200265" SubID="8" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200266" SubID="9" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200267" SubID="10" SentenceType="Spoken" SpeakerID="100110">
+				<Effect Name="effe6" Owner="100110" Life="13" Size="1" Pos="2"/>
+				<Effect Name="eff23" Owner="100100" Life="13" Size="1.3" Pos="5"/>
+			</Sentence>
+			<Sentence ID="200268" SubID="11" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200269" SubID="12" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200270" SubID="13" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200271" SubID="14" SentenceType="Spoken" SpeakerID="100100"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.45"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="1131" NodeType="Sentence" Next="1141" ChangeBGImage="BG (13)">
+			<Sentence ID="200272" SubID="0" SentenceType="Spoken" SpeakerID="100107"/>
+			<Sentence ID="200273" SubID="1" SentenceType="Spoken" SpeakerID="100112"/>
+			<Sentence ID="200274" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200275" SubID="3" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200276" SubID="4" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200277" SubID="5" SentenceType="Spoken" SpeakerID="100110"/>
+			<Sentence ID="200278" SubID="6" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200279" SubID="7" SentenceType="Spoken" SpeakerID="100110"/>
+			<Actor ID="100101" Mood="Happy" x="0.8"/>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.45"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+		<Node ID="1141" NodeType="Sentence" Next="1151" ChangeBGImage="BG (13)">
+			<Sentence ID="200280" SubID="0" SentenceType="Spoken" SpeakerID="100100">
+				<Effect Name="effe6" Owner="100100" Life="1" Size="1" Pos="0"/>
+				<Effect Name="effe6" Owner="100100" Life="1" Size="1" Pos="0"/>
+				<Effect Name="eff12" Owner="100100" Life="1" Size="1" Pos="0"/>
+				<Effect Name="eff12" Owner="100100" Life="1" Size="1" Pos="1"/>
+				<Effect Name="eff12" Owner="100100" Life="1" Size="1" Pos="2"/>
+				<Effect Name="eff12" Owner="100100" Life="1" Size="1" Pos="3"/>
+				<Effect Name="eff12" Owner="100100" Life="1" Size="1" Pos="4"/>
+			</Sentence>
+			<Actor ID="100110" Mood="Happy" x="0.65"/>
+			<Actor ID="100112" Mood="Happy" x="0.45"/>
+			<Actor ID="100107" Mood="Happy" x="0.2"/>
+		</Node>
+	</Scene>
+	<Scene ID="14" Name="14" BGImage="BG (2)" BGAudio="Au1">
+		<Node ID="1151" NodeType="Sentence" Next="1161" ChangeBGImage="BG (2)">
+			<Sentence ID="200281" SubID="0" SentenceType="Spoken" SpeakerID="100109"/>
+			<Sentence ID="200282" SubID="1" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200283" SubID="2" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200284" SubID="3" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200285" SubID="4" SentenceType="Spoken" SpeakerID="100109"/>
+			<Sentence ID="200286" SubID="5" SentenceType="Spoken" SpeakerID="100101"/>
+			<Sentence ID="200287" SubID="6" SentenceType="Spoken" SpeakerID="100109"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100109" Mood="Happy" x="0.35"/>
+		</Node>
+		<Node ID="1161" NodeType="End" ChangeBGImage="BG (2)">
+			<Sentence ID="200288" SubID="0" SentenceType="Spoken" SpeakerID="100100"/>
+			<Actor ID="100101" Mood="Happy" x="0.65"/>
+			<Actor ID="100109" Mood="Happy" x="0.35"/>
+		</Node>
+	</Scene>
+</Libretto>
